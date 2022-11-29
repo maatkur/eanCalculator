@@ -2,7 +2,7 @@ import re
 from dbfread import DBF
 from checker import ean_validation
 
-file = r"c:\users\mathe\desktop\produtos.dbf"
+file = r"c:\users\matheus\desktop\produtos.dbf"
 
 dbf_produtcts = DBF(file, encoding="cp437", load=True)
 
@@ -49,7 +49,7 @@ for record in dbf_produtcts:
 
     wrong_ean = list(set(wrong_ean))
 
-with open(r"c:\users\mathe\desktop\ean.txt", "w") as file:
+with open(r"c:\users\matheus\desktop\ean.txt", "w") as file:
     file.write("CODIGO||             PRODUTO                    ||  Incorreto  ||   Correto  \n")
     file.write("==============================================================================\n")
     for item in wrong_ean:
